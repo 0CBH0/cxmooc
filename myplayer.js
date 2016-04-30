@@ -863,3 +863,7 @@ MoocPlayer.prototype.finishJob = function() {
  */
 MoocPlayer.prototype.sendLog = function(flag, time) {
 };
+
+function showMoocPlayer(paras) {
+	alert("here~");
+}
