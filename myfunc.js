@@ -1,4 +1,4 @@
-var errorTest = 240;
+ï»¿var errorTest = 240;
 var courseId = '';
 var clazzId = '';
 var chapterId = '';
@@ -15,16 +15,16 @@ function config(d){
 	return a.frameElement.getAttribute(d);
 }
 function getCookie(c_name){
-¡¡¡¡¡¡¡¡if (document.cookie.length>0){
-¡¡¡¡¡¡¡¡¡¡¡¡c_start=document.cookie.indexOf(c_name + "=")¡¡¡¡¡¡¡¡
-¡¡¡¡¡¡¡¡¡¡¡¡if (c_start!=-1){
-¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡c_start=c_start + c_name.length+1
-¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡c_end=document.cookie.indexOf(";",c_start)¡¡
-¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡if (c_end==-1) c_end=document.cookie.length
-¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡return unescape(document.cookie.substring(c_start,c_end))
-¡¡¡¡¡¡¡¡¡¡¡¡} 
-¡¡¡¡¡¡¡¡}
-¡¡¡¡¡¡¡¡return ""
+ã€€ã€€ã€€ã€€if (document.cookie.length>0){
+ã€€ã€€ã€€ã€€ã€€ã€€c_start=document.cookie.indexOf(c_name + "=")ã€€ã€€ã€€ã€€
+ã€€ã€€ã€€ã€€ã€€ã€€if (c_start!=-1){
+ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€c_start=c_start + c_name.length+1
+ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€c_end=document.cookie.indexOf(";",c_start)ã€€
+ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€if (c_end==-1) c_end=document.cookie.length
+ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€return unescape(document.cookie.substring(c_start,c_end))
+ã€€ã€€ã€€ã€€ã€€ã€€} 
+ã€€ã€€ã€€ã€€}
+ã€€ã€€ã€€ã€€return ""
 }
 function getCourseInfo(item)
 {
@@ -34,10 +34,10 @@ function getCourseInfo(item)
 }
 function loadVideo() {
 	var objectid = config('objectid');
-	a.Ext.get('objectid').setHTML('ÎÄ¼þID:' + objectid);
+	a.Ext.get('objectid').setHTML('æ–‡ä»¶ID:' + objectid);
 	var reader = a.Ext.get('reader');
 	if (!objectid) {
-		reader.setHTML('Î´ÕÒµ½¸ÃÎÄ¼þ');
+		reader.setHTML('æœªæ‰¾åˆ°è¯¥æ–‡ä»¶');
 		return;
 	}
 	var iframe = a.frameElement;
