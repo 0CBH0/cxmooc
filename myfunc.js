@@ -15,29 +15,29 @@ function config(d){
 	return a.frameElement.getAttribute(d);
 }
 function getCookie(c_name){
-　　　　if (document.cookie.length>0){
-　　　　　　c_start=document.cookie.indexOf(c_name + "=")　　　　
-　　　　　　if (c_start!=-1){
-　　　　　　　　c_start=c_start + c_name.length+1
-　　　　　　　　c_end=document.cookie.indexOf(";",c_start)　
-　　　　　　　　if (c_end==-1) c_end=document.cookie.length
-　　　　　　　　return unescape(document.cookie.substring(c_start,c_end))
-　　　　　　} 
-　　　　}
-　　　　return ""
+	if (document.cookie.length>0){
+		c_start=document.cookie.indexOf(c_name + "=")
+		if (c_start!=-1){
+			c_start=c_start + c_name.length+1;
+			c_end=document.cookie.indexOf(";",c_start);
+			if (c_end==-1) c_end=document.cookie.length;
+			return unescape(document.cookie.substring(c_start,c_end));
+		}
+	}
+	return "";
 }
-function getCourseInfo(item)
-{
-     var infoReg = new RegExp("(^|&)"+ item +"=([^&]*)(&|$)");
-     var r = window.location.search.substr(1).match(infoReg);
-     if(r!=null)return  unescape(r[2]); return null;
+function getCourseInfo(item){
+	var infoReg = new RegExp("(^|&)"+ item +"=([^&]*)(&|$)");
+	var r = window.location.search.substr(1).match(infoReg);
+	if(r!=null) return unescape(r[2]);
+	return null;
 }
 function loadVideo() {
 	var objectid = config('objectid');
-	a.Ext.get('objectid').setHTML('文件ID:' + objectid);
+	a.Ext.get('objectid').setHTML('fileID:' + objectid);
 	var reader = a.Ext.get('reader');
 	if (!objectid) {
-		reader.setHTML('未找到该文件');
+		reader.setHTML('can\'t find it');
 		return;
 	}
 	var iframe = a.frameElement;
