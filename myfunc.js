@@ -130,6 +130,8 @@ function loadVideo() {
 				}
 			}
 			mp = new a.MoocPlayer({isSendLog: !!a.parent.AttachmentSetting && a.parent.AttachmentSetting.control,data: paras,height: 540,width: 676});
+			mp.initDataUrl = '';
+			mp._init();
 			break;
 		}
 	}
