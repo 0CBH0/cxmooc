@@ -28,9 +28,9 @@ function getCookie(c_name){
 }
 function getCourseInfo(item)
 {
-     var infoReg = new RegExp("(^|&)"+ item +"=([^&]*)(&|$)");
-     var r = window.location.search.substr(1).match(infoReg);
-     if(r!=null)return  unescape(r[2]); return null;
+	var infoReg = new RegExp("(^|&)"+ item +"=([^&]*)(&|$)");
+	var r = window.location.search.substr(1).match(infoReg);
+	if(r!=null)return  unescape(r[2]); return null;
 }
 function loadVideo() {
 	var objectid = config('objectid');
