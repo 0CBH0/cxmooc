@@ -167,7 +167,8 @@ function playNewMovie(){
 				});
 			}
 		}else{
-			moviePlay = true;
+			if(mp.player.getPlayState()==1)
+				moviePlay = true;
 		}
 	}
 }
