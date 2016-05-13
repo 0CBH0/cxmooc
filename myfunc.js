@@ -199,6 +199,12 @@ function playCheck(){
 		moviePlay = false;
 		errorTest = 240;
 	}
+	if((moviePlay==true)&&(mp.initDataUrl != ''))
+	{
+		mp.initDataUrl = '';
+		mp._init();
+		newMovie = 1;
+	}
 	if(errorTest>0)
 	{
 		errorTest--;
