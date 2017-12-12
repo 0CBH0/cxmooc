@@ -3,19 +3,19 @@ function shTj(){
 	var obj={};
 	if(checkall){
 		if($("#shxm").val().trim()==""){
-			alert("姓名或者昵称没有填写哦！");
+			alert("no name");
 			checkall=false;
 		}
 	}
 	if(checkall){
 		if($("#shszd").val()==""){
-			alert("所在地没有选择哦！");
+			alert("no position");
 			checkall=false;
 		}
 	}
 	if(checkall){
 		if($("#shsj").val()==""){
-			alert("手机号没有填写哦！");
+			alert("no phone");
 			checkall=false;
 		}
 	}
@@ -23,7 +23,7 @@ function shTj(){
 		var str= /^(1[3|4|5|7|8])\d{9}$/;
 		if(!$("#shsj").val().match(str))
 		{
-			alert("请输入正确的11位手机号");
+			alert("worry phone");
 			checkall=false;
 		}
 	}
@@ -59,16 +59,16 @@ function shTj(){
 		var url = 'http://active.kaiwind.com/kfvote/2017yunfan/submit.php?type=1&name='+encodeURIComponent($("#shxm").val())+'&location='+encodeURIComponent($("#shszd").val())+'&phone='+$("#shsj").val()+'&ar='+true+'&questions='+JSON.stringify(obj)+'&callback=?';
 		jQuery.getJSON(url, function(data){
 			if(data.ispass=="1"){
-				alert("谢谢参与答题，提交成功！");
+				alert("THX");
 				location.reload();
 			}else if(data.ispass=="2"){
-				alert("提交地址不对!");
+				alert("worry position");
 			}else if(data.ispass=="3"){
-				alert("提交过于频繁!");
+				alert("too much times");
 			}else if(data.ispass=="4"){
-				alert("手机号已经提交过了!");
+				alert("have done");
 			}else if(data.ispass=="5"){
-				alert("答题错误!");
+				alert("worry ans");
 			}
 		}); 
 	}
